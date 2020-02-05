@@ -1,2 +1,6 @@
-# GamePlatformAPI
-Project that links Unity highscore and user preferences with a website with an API. 
+# Game Platform API
+The aim for this project is to link a unity game with a website. 
+
+## Website
+- Show user highscore
+- Change minor in-game settings
