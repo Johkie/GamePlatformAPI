@@ -6,11 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     private float rotateFactor = 20f;
 
-    private float minRotationX = -6.0f;
-    private float maxRotationX = 6.0f;
+    private float minRotationX = -8.0f;
+    private float maxRotationX = 8.0f;
 
-    private float minRotationZ = -6.0f;
-    private float maxRotationZ = 6.0f;
+    private float minRotationZ = -8.0f;
+    private float maxRotationZ = 8.0f;
 
     public Transform XPlane;
     public Transform ZPlane;

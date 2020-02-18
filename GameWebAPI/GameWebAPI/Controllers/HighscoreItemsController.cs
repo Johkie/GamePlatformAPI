@@ -32,8 +32,12 @@ namespace GameWebAPI.Controllers
         public async Task<ActionResult<IEnumerable<HighscoreItem>>> GetTopHighscoreItem(int nrOfScores)
         {
             var highscoreItems = await _context.HighscoreItems.ToListAsync();
-
             var sortedList = highscoreItems.OrderByDescending(o => o.Score).ToList();
+
+            if (nrOfScores > sortedList.Count)
+            {
+                nrOfScores = sortedList.Count;
+            }
 
             return sortedList.GetRange(0, nrOfScores);
         }
