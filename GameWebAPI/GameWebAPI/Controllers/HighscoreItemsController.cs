@@ -27,6 +27,17 @@ namespace GameWebAPI.Controllers
             return await _context.HighscoreItems.ToListAsync();
         }
 
+        // GET: api/HighscoreItems/top/5
+        [HttpGet("top/{nrOfScores}")]
+        public async Task<ActionResult<IEnumerable<HighscoreItem>>> GetTopHighscoreItem(int nrOfScores)
+        {
+            var highscoreItems = await _context.HighscoreItems.ToListAsync();
+
+            var sortedList = highscoreItems.OrderByDescending(o => o.Score).ToList();
+
+            return sortedList.GetRange(0, nrOfScores);
+        }
+
         // GET: api/HighscoreItems/5
         [HttpGet("{id}")]
         public async Task<ActionResult<HighscoreItem>> GetHighscoreItem(int id)
@@ -40,6 +51,8 @@ namespace GameWebAPI.Controllers
 
             return highscoreItem;
         }
+
+
 
         // PUT: api/HighscoreItems/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for

@@ -19,8 +19,8 @@ public class HSItemUI : MonoBehaviour
 
     public void AssignHSItem(HSItem item)
     {
-        userText.text = item.User;
-        scoreText.text = item.Score.ToString();
+        userText.text = item.user;
+        scoreText.text = item.score.ToString();
     }
 
     public void AssignHSItem(string user, int score)

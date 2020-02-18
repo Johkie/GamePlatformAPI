@@ -2929,7 +2929,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 44
+  m_fontSize: 30.05
   m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3999,6 +3999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5c3f697641bee4aaaf95cfaedbc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hsItems: []
 --- !u!1 &487676950
 GameObject:
   m_ObjectHideFlags: 0
@@ -4119,7 +4120,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 44
+  m_fontSize: 27.2
   m_fontSizeBase: 37.7
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6539,7 +6540,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 44
+  m_fontSize: 25.2
   m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9319,6 +9320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5c3f697641bee4aaaf95cfaedbc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hsItems: []
 --- !u!114 &1213361685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9365,6 +9367,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1217337033}
   - component: {fileID: 1217337034}
+  - component: {fileID: 1217337035}
+  - component: {fileID: 1217337036}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9401,6 +9405,31 @@ MonoBehaviour:
   MainMenuUI: {fileID: 103522210}
   PauseMenuUI: {fileID: 257422508}
   InGameUI: {fileID: 1823996408}
+--- !u!114 &1217337035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217337032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc231af125108f14dac1a91de33c4b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1217337036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217337032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5c3f697641bee4aaaf95cfaedbc76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hsItems: []
 --- !u!1 &1234322836
 GameObject:
   m_ObjectHideFlags: 0
@@ -11683,7 +11712,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 44
+  m_fontSize: 26.45
   m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11838,7 +11867,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 44
+  m_fontSize: 23.95
   m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 1

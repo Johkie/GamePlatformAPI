@@ -4,19 +4,37 @@ using UnityEngine;
 
 public class HSManager : MonoBehaviour
 {
-    private HSItemUI[] hsItems;
+    public HSItemUI[] hsItems;
 
     public void Awake()
     {
         hsItems = GetComponentsInChildren<HSItemUI>();
+        ClearBoard();
+
+        FindObjectOfType<WebAPI>().highScoreUpdateCallback = UpdateHighscore;
+        FindObjectOfType<WebAPI>().UpdateHighScore();    
     }
 
-    public void OnEnable()
+    private void ClearBoard()
     {
-        hsItems[0].AssignHSItem("Johkie1", 2000);
-        hsItems[1].AssignHSItem("Johkie2", 1900);
-        hsItems[2].AssignHSItem("Assc3", 1500);
-        hsItems[3].AssignHSItem("", 0);
-        hsItems[4].AssignHSItem("", 0);
+        if (hsItems.Length != 0)
+        {
+            hsItems[0].AssignHSItem("", 0);
+            hsItems[1].AssignHSItem("", 0);
+            hsItems[2].AssignHSItem("", 0);
+            hsItems[3].AssignHSItem("", 0);
+            hsItems[4].AssignHSItem("", 0);
+        }
+    }
+    public void UpdateHighscore(List<HSItem> items)
+    {
+        if (hsItems.Length != 0)
+        {
+            ClearBoard();
+            for (int i = 0; i < items.Count; i++)
+            {
+                hsItems[i].AssignHSItem(items[i].user, items[i].score);
+            }
+        }
     }
 }
