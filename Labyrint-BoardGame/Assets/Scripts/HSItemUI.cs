@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class HSItem : MonoBehaviour
+public class HSItemUI : MonoBehaviour
 {
     private TextMeshProUGUI rankText;
     private TextMeshProUGUI userText;
@@ -17,7 +17,7 @@ public class HSItem : MonoBehaviour
         scoreText = texts[2];
     }
 
-    public void AssignHSItem(HSItemElement item)
+    public void AssignHSItem(HSItem item)
     {
         userText.text = item.User;
         scoreText.text = item.Score.ToString();

@@ -2,20 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HSItemElement
-{
-    public int Id { get; set; }
-    public string User { get; set; }
-    public int Score { get; set; }
-}
-
 public class HSManager : MonoBehaviour
 {
-    private HSItem[] hsItems;
+    private HSItemUI[] hsItems;
 
     public void Awake()
     {
-        hsItems = GetComponentsInChildren<HSItem>();
+        hsItems = GetComponentsInChildren<HSItemUI>();
     }
 
     public void OnEnable()
