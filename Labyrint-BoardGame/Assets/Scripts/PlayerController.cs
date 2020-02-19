@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float rotateFactor = 20f;
+    private float rotateFactor = 30;
 
-    private float minRotationX = -8.0f;
-    private float maxRotationX = 8.0f;
+    private float minRotationX = -7.0f;
+    private float maxRotationX = 7.0f;
 
-    private float minRotationZ = -8.0f;
-    private float maxRotationZ = 8.0f;
+    private float minRotationZ = -7.0f;
+    private float maxRotationZ = 7.0f;
 
     public Transform XPlane;
     public Transform ZPlane;

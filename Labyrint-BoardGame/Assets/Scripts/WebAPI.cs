@@ -10,7 +10,7 @@ public class WebAPI : MonoBehaviour
 {
     public HighScoreItemDelegate highScoreUpdateCallback;
 
-    readonly string  webApiUrl = "https://localhost:44341/api/HighscoreItems";
+    readonly string  webApiUrl = "https://localhost:44321/api/HighscoreItems";
 
     private List<HSItem> hsItems;
 

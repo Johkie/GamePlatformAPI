@@ -14,6 +14,7 @@ public class ObstacleManager : MonoBehaviour
 
     private List<ObstacleDelegate> obstacleRandomizer = new List<ObstacleDelegate>();
     private Obstacle[] obstacles;
+    private Obstacle previousGreenObstacle;
 
     public float timeSinceLastHit;
 
@@ -24,6 +25,7 @@ public class ObstacleManager : MonoBehaviour
         obstacleRandomizer.Add(NeutralObstacle);
 
         obstacles = FindObjectsOfType<Obstacle>();
+        previousGreenObstacle = obstacles[0];
 
         // Sort out all static obstacles
         List<Obstacle> temp = new List<Obstacle>();
@@ -73,10 +75,11 @@ public class ObstacleManager : MonoBehaviour
         {
             o.transform.rotation *= Quaternion.Euler(0, Random.Range(0, 360), 0);
 
-            if (currentGreenObstacles < maxGoodObstacles)
+            if (currentGreenObstacles < maxGoodObstacles && previousGreenObstacle.name != o.name)
             {
                 GoodObstacle(o);
                 currentGreenObstacles++;
+                previousGreenObstacle = o;
             }
             else if (currentRedObstacles < maxRedObstalces)
             {
@@ -102,7 +105,7 @@ public class ObstacleManager : MonoBehaviour
     {
         o.material.color = greenMaterial.color;
         o.scoreModifier = 500;
-        o.timeModifier = 20;
+        o.timeModifier = 15;
         o.isGoodObstacle = true;
     }
 

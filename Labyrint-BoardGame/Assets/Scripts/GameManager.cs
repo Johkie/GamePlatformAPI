@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private bool isGameRunning;
 
-    private float startTime = 120;
+    private float startTime = 60;
     private float timeLeft;
 
     void Awake()

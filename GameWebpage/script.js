@@ -1,5 +1,5 @@
-var URL_HighscoreAPI = "https://localhost:44341/api/HighscoreItems"
-var URL_UserSettingsAPI = "https://localhost:44341/api/UserSettings"
+var URL_HighscoreAPI = "https://localhost:44321/api/HighscoreItems"
+var URL_UserSettingsAPI = "https://localhost:44321/api/UserSettings"
 
 async function getDataAsync(url)
 {
